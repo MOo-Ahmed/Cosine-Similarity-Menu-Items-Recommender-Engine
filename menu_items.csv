@@ -1,4 +1,4 @@
-item_id,restaurant,section,item,description,price
+id,restaurant,section,name,description,price
 0,ab cafe delish,espresso,hot tea,different tea flavor,4
 1,a s fine foods,wraps,0 ham capicola provolone and hot peppers wrap,nan,12
 2,0 star asian cafe,moo shu,ms0 moo shu beef,nan,14
