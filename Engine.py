@@ -4,7 +4,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 
 class RecommendationEngine :
-    dataset_filename = 'menu_items.csv'
+    dataset_filename = 'Datasets/menu_items.csv'
     recommendation_name = 'menu item'
     
     def __init__(self, item_name, n, recommendation_name):
@@ -17,7 +17,7 @@ class RecommendationEngine :
 
     def get_Important_Columns(self, recommendation_name):
         if recommendation_name == 'menu item' :
-            return ['price', 'section', 'description', 'name']
+            return [ 'name', 'section']
     
     #Create a function to combine the values of the important columns into a single string
     def getConcatenatedString(self, data, i):
@@ -71,7 +71,7 @@ class RecommendationEngine :
         sorted_scores = sorted(scores, key = lambda x : x[1], reverse = True)
 
         #Don't take the first element because it's the same
-        sorted_scores = sorted_scores[1:]
+        sorted_scores = sorted_scores[2:]
 
         #print the sotred scores
         #print(sorted_scores)
